@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -105,7 +106,6 @@ public class AddEvent extends AppCompatActivity {
             event_details_string = event_details.getText().toString();
             String datetimeStart = dateConverter(datepicker_start_year,datepicker_start_month,datepicker_start_day,timestart_hour, timestart_min);
             String datetimeEnd = dateConverter(datepicker_end_year,datepicker_end_month,datepicker_end_day,timeend_hour, timeend_min);
-//            Toast.makeText(getApplicationContext(), datetimeStart + " - " + datetimeEnd, Toast.LENGTH_SHORT).show();
 //            Toast.makeText(getApplicationContext(), event_title_string + ", " + event_details_string + "\n" + datepicker_start_month + " " + datepicker_start_day + ", " + datepicker_start_year + " - " + datepicker_end_month + " " + datepicker_end_day + ", " + datepicker_end_year +" \n" + timestart_hour + ":" + timestart_min + "\n" + timeend_hour + ":" + timeend_min, Toast.LENGTH_SHORT).show();
 
             eventitem.setTitle(event_title_string);
@@ -114,8 +114,10 @@ public class AddEvent extends AppCompatActivity {
             eventitem.setDateEnd(datetimeEnd);
             eventitem.setTimeStart("timestart");
             eventitem.setTimeEnd("timeend");
+            eventitem.setFolderLocation("folderlocation");
 
             dbmanager.insertEvent(eventitem);
+            Toast.makeText(getApplicationContext(), dbmanager.getEvent(1).getTitle(), Toast.LENGTH_SHORT).show();
         }
     }
 

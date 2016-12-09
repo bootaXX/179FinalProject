@@ -73,7 +73,7 @@ public class DBManager {
         }
 
 
-        EventItem eventItem = new EventItem(cursor.getString(0), cursor.getString(1), cursor.getString(2),
+        EventItem eventItem = new EventItem(Integer.toString(cursor.getInt(0)), cursor.getString(1), cursor.getString(2),
                 cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6), cursor.getString(7));
 
         return  eventItem;
@@ -130,7 +130,7 @@ public class DBManager {
 
         // looping through all rows and adding to list
         for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-            EventItem eventItem = new EventItem(cursor.getString(0), cursor.getString(1), cursor.getString(2),
+            EventItem eventItem = new EventItem(Integer.toString(cursor.getInt(0)), cursor.getString(1), cursor.getString(2),
                     cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6), cursor.getString(7));
             eventItemList.add(eventItem);
         }

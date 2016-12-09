@@ -45,7 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     //Table Create Statements
     //TABLE_EVENTS create statement
     private static final String CREATE_TABLE_EVENTS = "CREATE TABLE " + TABLE_EVENTS + "(" +
-            KEY_ID + " TEXT PRIMARY KEY AUTOINCREMENT, " +
+            KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             KEY_TITLE + " TEXT NOT NULL, " +
             KEY_DETAILS + " TEXT, " +
             KEY_FOLDER_LOCATION + " TEXT NOT NULL, " +
@@ -56,8 +56,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     //TABLE_DIRECTORIES create satement
     private static final String CREATE_TABLE_DIRECTORIES = "CREATE TABLE " + TABLE_DIRECTORIES + "(" +
-            KEY_ID + " TEXT PRIMARY KEY AUTOINCREMENT, " +
-            KEY_EVENT_ID + " TEXT PRIMARY KEY ON DELETE CASCADE, " +
+            KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            KEY_EVENT_ID + " INTEGER REFERENCES "+ TABLE_EVENTS+"("+ KEY_ID + ") ON DELETE CASCADE ON UPDATE CASCADE, " +
             KEY_LOCATION + " TEXT NOT NULL)";
 
 

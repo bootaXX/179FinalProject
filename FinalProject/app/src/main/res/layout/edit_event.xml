@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/event_title_id"
+        android:id="@+id/edit_event_title_id"
         android:hint="Event Title" />
 
     <EditText
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/event_detail_id"
+        android:id="@+id/edit_event_detail_id"
         android:hint="Details" />
 
     <ScrollView
@@ -43,7 +43,7 @@
             <DatePicker
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/date_start_picker_id"
+                android:id="@+id/edit_date_start_picker_id"
                 android:datePickerMode="spinner" />
 
             <TextView
@@ -58,7 +58,7 @@
             <DatePicker
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/date_end_picker_id"
+                android:id="@+id/edit_date_end_picker_id"
                 android:datePickerMode="spinner" />
 
             <TextView
@@ -73,7 +73,7 @@
             <TimePicker
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/start_time_id"
+                android:id="@+id/edit_start_time_id"
                 android:timePickerMode="spinner" />
 
             <TextView
@@ -88,7 +88,7 @@
             <TimePicker
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/end_time_id"
+                android:id="@+id/edit_end_time_id"
                 android:timePickerMode="spinner" />
 
         </LinearLayout>
@@ -98,6 +98,6 @@
         android:text="UPDATE"
         android:layout_width="match_parent"
         android:layout_height="73dp"
-        android:id="@+id/add_event_button_id" />
+        android:id="@+id/update_event_button_id" />
 
 </LinearLayout>

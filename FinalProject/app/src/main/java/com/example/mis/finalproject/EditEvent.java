@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -43,12 +42,12 @@ public class EditEvent  extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.edit_event_event);
+        setContentView(R.layout.edit_event);
 
-        event_title = (EditText) findViewById(R.id.edit_event_id);
-        event_details = (EditText) findViewById(R.id.event_detail_id);
+        event_title = (EditText) findViewById(R.id.edit_event_title_id);
+        event_details = (EditText) findViewById(R.id.edit_event_detail_id);
 
-        datepicker_start = (DatePicker) findViewById(R.id.date_start_picker_id);
+        datepicker_start = (DatePicker) findViewById(R.id.edit_date_start_picker_id);
         Calendar calendar  = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
         datepicker_start.init(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), new DatePicker.OnDateChangedListener(){
@@ -60,7 +59,7 @@ public class EditEvent  extends AppCompatActivity {
             }
         });
 
-        datepicker_end = (DatePicker) findViewById(R.id.date_end_picker_id);
+        datepicker_end = (DatePicker) findViewById(R.id.edit_date_end_picker_id);
         Calendar calendar1  = Calendar.getInstance();
         calendar1.setTimeInMillis(System.currentTimeMillis());
         datepicker_end.init(calendar1.get(Calendar.YEAR), calendar1.get(Calendar.MONTH), calendar1.get(Calendar.DAY_OF_MONTH), new DatePicker.OnDateChangedListener(){
@@ -72,7 +71,7 @@ public class EditEvent  extends AppCompatActivity {
             }
         });
 
-        timestart = (TimePicker) findViewById(R.id.start_time_id);
+        timestart = (TimePicker) findViewById(R.id.edit_start_time_id);
         timestart.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker timePicker, int hour, int min) {
@@ -81,7 +80,7 @@ public class EditEvent  extends AppCompatActivity {
             }
         });
 
-        timeend = (TimePicker) findViewById(R.id.end_time_id);
+        timeend = (TimePicker) findViewById(R.id.edit_end_time_id);
         timeend.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker timePicker, int hour, int min) {
@@ -90,11 +89,11 @@ public class EditEvent  extends AppCompatActivity {
             }
         });
 
-        addevent = (Button) findViewById(R.id.add_event_button_id);
-        addevent.setOnClickListener(new AddEvent.OnClickListenerAddEvent());
+        addevent = (Button) findViewById(R.id.update_event_button_id);
+//        addevent.setOnClickListener(new AddEvent.OnClickListenerAddEvents());
     }
 
-    public class OnClickListenerAddEvent implements View.OnClickListener{
+    public class OnClickListenerAddEvents implements View.OnClickListener{
         @Override
         public void onClick(View view) {
             event_title_string = event_title.getText().toString();
