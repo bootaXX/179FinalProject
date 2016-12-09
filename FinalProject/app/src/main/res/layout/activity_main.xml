@@ -51,20 +51,14 @@
 
         </LinearLayout>
 
-        <TextView
-            android:text="TextView"
+        <fragment
             android:layout_width="match_parent"
-            android:layout_height="144dp"
-            android:id="@+id/events_today" />
-
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_slideshow"
-            android:id="@+id/showEvent" />
+            android:layout_height="199dp"
+            android:name="android.support.v4.app.ListFragment"
+            android:id="@+id/events_today_id" />
 
         <fragment
-            android:id="@+id/folders"
+            android:id="@+id/folders_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:name="android.support.v4.app.ListFragment" />

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_event_title_id"
+        android:layout_weight="0.19"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_event_details_id"
+        android:layout_weight="0.70" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_event_datetime_id"
+        android:layout_weight="0.28" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="121dp">
+
+        <Button
+            android:text="EDIT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_event_id"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="DELETE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_event_id"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

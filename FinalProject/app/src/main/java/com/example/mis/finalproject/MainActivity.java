@@ -26,12 +26,6 @@ MainActivity extends AppCompatActivity {
 
         ImageButton camera = (ImageButton) findViewById(R.id.btn_camera);
         camera.setOnClickListener(new OnClickListenerOpenCamera());
-
-        ImageButton events = (ImageButton) findViewById(R.id.showEvent);
-        events.setOnClickListener(new OnClickListenerViewEvents());
-
-        TextView events_today = (TextView) findViewById(R.id.events_today);
-        events_today.setText("Events Here ;)");
     }
 
     public class OnClickListenerOpenCalendar implements View.OnClickListener{
@@ -50,17 +44,4 @@ MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
-    public class OnClickListenerViewEvents implements View.OnClickListener{
-        long startMillis;
-        @Override
-        public void onClick(View view) {
-            Uri.Builder builder = CalendarContract.CONTENT_URI.buildUpon();
-            builder.appendPath("time");
-            ContentUris.appendId(builder, startMillis);
-            Intent intent = new Intent(Intent.ACTION_VIEW).setData(builder.build());
-            startActivity(intent);
-        }
-    }
-
 }

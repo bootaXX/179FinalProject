@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/event_title_id"
+        android:hint="Event Title" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/event_detail_id"
+        android:hint="Details" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="356dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="DATE START"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/background_dark" />
+
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_start_picker_id"
+                android:datePickerMode="spinner" />
+
+            <TextView
+                android:text="DATE END"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_end_picker_id"
+                android:datePickerMode="spinner" />
+
+            <TextView
+                android:text="TIME START"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/background_dark" />
+
+            <TimePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/start_time_id"
+                android:timePickerMode="spinner" />
+
+            <TextView
+                android:text="TIME END"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TimePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/end_time_id"
+                android:timePickerMode="spinner" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:text="UPDATE"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:id="@+id/add_event_button_id" />
+
+</LinearLayout>
