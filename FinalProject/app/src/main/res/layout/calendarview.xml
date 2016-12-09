@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/calendarToJournalButton"
+        android:gravity="left"
+        android:layout_width="34dp"
+        android:layout_height="44dp"
+        android:paddingBottom="10dip"
+        app:srcCompat="?attr/actionModeCloseDrawable">
+    </ImageView>
+
+
+    <Button
+        android:id="@+id/selectedDayMonthYear"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp">
+    </Button>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/prevMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/ic_media_previous"
+            android:layout_weight="0.03"
+            android:background="@android:color/holo_green_dark">
+        </ImageView>
+
+        <Button
+            android:id="@+id/currentMonth"
+            android:layout_weight="0.09"
+            android:textColor="@android:color/background_dark"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+        </Button>
+
+        <ImageView
+            android:id="@+id/nextMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/ic_media_next"
+            android:layout_weight="0.03"
+            android:background="@android:color/holo_green_dark">
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/calendarheader"
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="36dp">
+        </ImageView>
+    </LinearLayout>
+
+
+    <GridView
+        android:id="@+id/calendar"
+        android:numColumns="7"
+        android:layout_width="fill_parent"
+        android:layout_height="269dp"
+        android:layout_weight="0.02">
+    </GridView>
+
+    <Button
+        android:text="ADD EVENT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_event_id" />
+
+</LinearLayout>
