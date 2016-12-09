@@ -34,9 +34,11 @@
                 style="?android:attr/borderlessButtonStyle" />
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.8"
-                />
+                android:layout_height="match_parent"
+                android:layout_weight="0.80"
+                android:text="FLEXIFOLIO"
+                android:textSize="24sp"
+                android:textAlignment="center" />
 
             <ImageButton
                 android:id="@+id/btn_camera"

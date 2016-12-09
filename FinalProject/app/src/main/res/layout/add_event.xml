@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1">
@@ -20,58 +22,82 @@
         android:id="@+id/event_detail_id"
         android:hint="Details" />
 
-    <TabHost
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="342dp"
-        android:layout_weight="1.21">
+        android:layout_height="356dp">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <TabWidget
-                android:id="@android:id/tabs"
+            <TextView
+                android:text="DATE START"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/background_dark" />
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
+            <DatePicker
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:id="@+id/date_start_picker_id"
+                android:datePickerMode="spinner" />
 
-                <LinearLayout
-                    android:id="@+id/Date"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+            <TextView
+                android:text="DATE END"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
 
-                    <DatePicker
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/date_picker_id" />
-                </LinearLayout>
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_end_picker_id"
+                android:datePickerMode="spinner" />
 
-                <LinearLayout
-                    android:id="@+id/Time"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+            <TextView
+                android:text="TIME START"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/background_dark" />
 
-                    <TimePicker
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/time_picker_id" />
-                </LinearLayout>
+            <TimePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/start_time_id"
+                android:timePickerMode="spinner" />
 
-            </FrameLayout>
+            <TextView
+                android:text="TIME END"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TimePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/end_time_id"
+                android:timePickerMode="spinner" />
+
         </LinearLayout>
-    </TabHost>
+    </ScrollView>
 
     <Button
         android:text="ADD"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="73dp"
         android:id="@+id/add_event_button_id" />
 
 </LinearLayout>
